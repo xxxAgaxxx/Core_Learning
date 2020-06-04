@@ -21,8 +21,7 @@ def nearest(value, cards):
     for i in range(len(cards)-1):
         if value < (float(cards[i+1]) + float(cards[i])) / 2:
             return cards[i]
-    else:
-        return cards[i+1]
+    return cards[i+1]
 
 
 plan_guess = input()
