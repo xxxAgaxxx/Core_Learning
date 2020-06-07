@@ -1,34 +1,34 @@
+from MutableInteger import MutableInteger
+
 def preincrement(num):
-    global number
-    number += 1
-    return num + 1
+    num.add(1)
+    return num.get()
 
 
 def postincrement(num):
-    global number
-    number += 1
-    return num
+    tmp = num.get()
+    num.add(1)
+    return tmp
 
 
 def predecrement(num):
-    global number
-    number -= 1
-    return num - 1
+    num.sub(1)
+    return num.get()
 
 
 def postdecrement(num):
-    global number
-    number -= 1
-    return num
+    tmp = num.get()
+    num.sub(1)
+    return tmp
 
 
-number = 1
-print('Число', number)
+number = MutableInteger(1)
+print('Число', number.get())
 print('Преинкремент', preincrement(number))
-print('Число', number)
+print('Число', number.get())
 print('Постинкремент', postincrement(number))
-print('Число', number)
+print('Число', number.get())
 print('Предекремент', predecrement(number))
-print('Число', number)
+print('Число', number.get())
 print('Постдекремент', postdecrement(number))
-print('Число', number)
+print('Число', number.get())
