@@ -1,4 +1,3 @@
-import Mutable
 public class MutableInteger
 {
     public MutableInteger(int value) {
@@ -20,38 +19,38 @@ public class MutableInteger
     private int value;
 }
 
-Integer preincrement(num) {
+MutableInteger preincrement(num) {
     num.add(1)
-    return num.get()
+    return num
 }
 
-Integer postincrement(num) {
-    tmp = num.get()
+MutableInteger postincrement(num) {
+    tmp = new MutableInteger(num)
     num.add(1)
     return tmp
 }
 
 
-Integer predecrement(num) {
+MutableInteger predecrement(num) {
     num.sub(1)
-    return num.get()
+    return num
 }
 
 
-Integer postdecrement(num) {
-    tmp = num.get()
+MutableInteger postdecrement(num) {
+    tmp = new MutableInteger(num)
     num.sub(1)
     return tmp
 }
 
 
-def number = new MutableInteger(1)
+def number = new MutableInteger(5)
 println('Число ' + number.get())
-println('Преинкремент ' + preincrement(number))
+println('Постинкремент ' + postincrement(number).get())
 println('Число ' + number.get())
-println('Постинкремент ' + postincrement(number))
+println('Преинкремент ' + preincrement(number).get())
 println('Число ' + number.get())
-println('Предекремент ' + predecrement(number))
+println('Предекремент ' + predecrement(number).get())
 println('Число ' + number.get())
-println('Постдекремент ' + postdecrement(number))
+println('Постдекремент ' + postdecrement(number).get())
 println('Число ' + number.get())

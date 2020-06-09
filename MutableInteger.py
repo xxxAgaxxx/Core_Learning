@@ -5,10 +5,10 @@ class MutableInteger:
 		else:
 			self.__value = value.__value
 
-	def add(self, value):
+	def add(self, value=1):
 		self.__value += value
 
-	def sub(self, value):
+	def sub(self, value=1):
 		self.__value -= value
 
 	def get(self):
