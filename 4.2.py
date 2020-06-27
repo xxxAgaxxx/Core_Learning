@@ -1,0 +1,1 @@
+print(sorted([i for i in input() if not int(i) % 2], reverse=True)) #ля чо могу
